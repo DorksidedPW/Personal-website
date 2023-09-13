@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Main from './components/layout/main';
 
 const Site = () => {
   const[globalData, setGlobalData] = useState(null);
@@ -17,7 +18,9 @@ const Site = () => {
   }, [])
 
   return (
-    <div>SITE</div>
+    <div>
+      <Main globalData={globalData}/>
+    </div>
   );
 }
 
