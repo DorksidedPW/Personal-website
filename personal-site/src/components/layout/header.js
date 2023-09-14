@@ -7,6 +7,7 @@ const Header = (props) => {
 
   return(
     <header className={classes.header}>
+      <div>LOGO</div>
       <MainMenu />
       <Button />  
     </header>

@@ -10,7 +10,15 @@ const useStyles = createUseStyles({
   header: {
     width: '100%',
     height: 148,
-    borderBottom: '1px solid #eaeaea'
+    display: 'flex',
+    padding: '32px 15% 32px 15%',
+    boxSizing: 'border-box',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderBottom: '1px solid #eaeaea',
+    '@media (max-width: 1024px)': {
+      padding: 16,
+    }
   },
 
   //PAGE
