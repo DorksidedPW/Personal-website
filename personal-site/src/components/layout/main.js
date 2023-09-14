@@ -3,7 +3,7 @@ import Header from "./header";
 import Post from "./post";
 import useStyles from "./layoutstyles";
 
-const Main = (props) => {
+export default function Main(props) {
   const classes = useStyles(); 
   const[posts, setPosts] = useState([]);
 
@@ -28,5 +28,3 @@ const Main = (props) => {
     </div>
   )
 }
-
-export default Main;  

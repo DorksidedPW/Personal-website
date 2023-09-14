@@ -2,7 +2,7 @@ import MainMenu from "./main-menu";
 import Button from '../buttons/button'
 import useStyles from "./layoutstyles";
 
-const Header = (props) => {
+export default function Header(props) {
   const classes = useStyles();
 
   return(
@@ -13,5 +13,3 @@ const Header = (props) => {
     </header>
   )
 }
-
-export default Header;

@@ -1,7 +1,7 @@
 import useStyles from "./layoutstyles";
 import { useEffect, useRef } from "react";
 
-const Section = (props) => {
+export default function Section(props) {
   const{post} = props; 
   const sectionRef = useRef(null);
   const classes = useStyles();
@@ -14,5 +14,3 @@ const Section = (props) => {
     </section>
   )
 }
-
-export default Section;

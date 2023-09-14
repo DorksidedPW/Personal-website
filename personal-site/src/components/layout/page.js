@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Page = (props) => {
+export default function Page(props) {
   const{page} = props;
 
   const[pageContent, setPageContent] = useState({
@@ -22,5 +22,3 @@ const Page = (props) => {
     <div></div>
   ) 
 }
-
-export default Page;

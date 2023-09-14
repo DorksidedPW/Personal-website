@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import useStyles from "./layoutstyles";
 
-const MainMenu = () => {
+export default function MainMenu(props) {
   const classes = useStyles();
 
   return(
@@ -14,5 +14,3 @@ const MainMenu = () => {
     </nav>
   )
 }
-  
-export default MainMenu
