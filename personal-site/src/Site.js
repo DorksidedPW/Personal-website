@@ -21,9 +21,7 @@ const Site = (props) => {
   }, [])
 
   return (
-    <div>
-      <Main globalData={globalData}/>
-    </div>
+    <Main globalData={globalData}/>
   );
 }
 

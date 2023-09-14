@@ -1,8 +1,12 @@
+import useStyles from "./layoutstyles";
+
 const Section = (props) => {
   const{post} = props; 
+  const classes = useStyles();
 
   return(
-    <section>
+    <section className={classes.section}>
+      <h2 className={classes.sectionTitle}>{post.title}</h2>
       <div dangerouslySetInnerHTML={{__html: post.content}}></div>
     </section>
   )
