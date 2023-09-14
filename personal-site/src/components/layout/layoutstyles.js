@@ -21,13 +21,25 @@ const useStyles = createUseStyles({
 
   //SECTION
   section: {
-    backgroundColor: '#eaeaea',
-    padding: '32px 10% 32px 10%',  
+    //backgroundColor: '#eaeaea',
+    padding: '32px 15% 32px 15%',
+    fontSize: 14,
+    fontWeight: 400,
+    fontFamily: "'Roboto', sans-serif ",
   },
 
   sectionTitle: {
+    fontFamily: "'Montserrat', sans-serif",
+    fontSize: 18.
     color: 'blue'
+  },
+
+  date: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#c6c6c6'
   }
+
 });
 
 export default useStyles;

@@ -1,8 +1,10 @@
 import Section from './section';
 import sanitizeHtml from 'sanitize-html';
+import useStyles from './layoutstyles';
 
 const Post = (props) => {
   const {post} = props;
+  const classes = useStyles();
 
   const formatPost = (post) => {
     const formattedPost = {

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Header from "./header";
 import Post from "./post";
+import useStyles from "./layoutstyles";
 
 const Main = (props) => {
+  const classes = useStyles(); 
   const[posts, setPosts] = useState([]);
 
   useEffect(() => {

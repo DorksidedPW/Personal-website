@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
+import useStyles from "./layoutstyles";
 
 const MainMenu = () => {
+  const classes = useStyles();
+
   return(
     <nav>
       <ul>
