@@ -1,4 +1,5 @@
 import MainMenu from "./main-menu";
+import Button from '../buttons/button'
 import useStyles from "./layoutstyles";
 
 const Header = (props) => {
@@ -7,6 +8,7 @@ const Header = (props) => {
   return(
     <header className={classes.header}>
       <MainMenu />
+      <Button />  
     </header>
   )
 }

@@ -18,6 +18,8 @@ const Post = (props) => {
     return(formattedPost); 
   }
 
+  console.log(post)
+
   return(<Section post={formatPost(post)}/>)
 }
 
