@@ -1,11 +1,15 @@
 const theme = {
   palette: {
-    primaryColor: 'red',
+    primaryColor: '#D91E0D',
+    primaryAccentColor: '#F2DFEB',
+
+    secondaryColor: '#153440',
+    secondaryAccentColor: '',
   },
-  
+
   buttonStyles: {
-    borderColor: 'red',
-    backgroundColor: 'pink',
+    borderColor: '#F2DFEB',
+    backgroundColor: '#D91E0D',
     labelColor: 'white'
   }
 }
