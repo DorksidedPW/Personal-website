@@ -1,5 +1,11 @@
+import MainMenu from "./main-menu";
+
 const Header = (props) => {
-  return(<header></header>)
+  return(
+    <header>
+      <MainMenu />
+    </header>
+  )
 }
 
 export default Header;

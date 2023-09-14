@@ -16,12 +16,11 @@ const Page = (props) => {
     setPageContent({})
   }, []); 
 
+  console.log(page)
+  
   return(
-    <div>
-      {pageContent.title}
-      {pageContent.content}
-    </div>
-  )
+    <div></div>
+  ) 
 }
 
 export default Page;

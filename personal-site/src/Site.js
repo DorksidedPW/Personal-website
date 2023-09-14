@@ -5,7 +5,7 @@ const Site = (props) => {
   const[globalData, setGlobalData] = useState({
     siteName: '',
   });
-  
+
   useEffect(() => {
     async function getData() {
       const response = await fetch('https://www.paulwassen.nl/wp-json');
@@ -16,12 +16,9 @@ const Site = (props) => {
         siteDescription: data.description
       });
     }
-
     getData();
 
   }, [])
-
-  console.log(globalData)
 
   return (
     <div>
