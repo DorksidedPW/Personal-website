@@ -41,7 +41,7 @@ const useStyles = createUseStyles({
 
   sectionTitle: {
     fontFamily: "'Montserrat', sans-serif",
-    fontSize: 24,
+    //background: ({theme}) => theme.palette.secondary
   },
 
   date: {

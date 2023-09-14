@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Header from "./header";
 import Post from "./post";
 import useStyles from "./layoutstyles";
+import theme from '../theme/theme';
+import {ThemeProvider} from 'react-jss';
 
 export default function Main(props) {
   const classes = useStyles(); 
@@ -20,11 +22,11 @@ export default function Main(props) {
   }, []);
 
   return(
-    <div>
+    <ThemeProvider theme={theme}>
       <Header />
       {posts.map((post) => {
         return(<Post key={post.id} post={post}/>)
       })}
-    </div>
+    </ThemeProvider>
   )
 }

@@ -2,7 +2,7 @@ import Section from './section';
 import sanitizeHtml from 'sanitize-html';
 import useStyles from './layoutstyles';
 
-const Post = (props) => {
+export default function Post(props) {
   const {post} = props;
   const classes = useStyles();
 
@@ -18,9 +18,5 @@ const Post = (props) => {
     return(formattedPost); 
   }
 
-  console.log(post)
-
   return(<Section post={formatPost(post)}/>)
 }
-
-export default Post;
