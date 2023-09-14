@@ -8,7 +8,7 @@ const Section = (props) => {
     <section className={classes.section}>
       <span className={classes.date}>{post.date}</span>
       <h2 className={classes.sectionTitle}>{post.title}</h2>
-      <div dangerouslySetInnerHTML={{__html: post.content}}></div>
+      <div className={classes.content} dangerouslySetInnerHTML={{__html: post.content}}></div>
     </section>
   )
 }
