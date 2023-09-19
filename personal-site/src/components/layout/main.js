@@ -8,7 +8,7 @@ import {ThemeProvider} from 'react-jss';
 export default function Main(props) {
   const classes = useStyles(); 
   const[posts, setPosts] = useState([]);
-
+  
   useEffect(() => {
     async function getPosts() {
       const response = await fetch('https://www.paulwassen.nl/wp-json/wp/v2/posts/');
@@ -18,7 +18,6 @@ export default function Main(props) {
     }
 
     getPosts();
-
   }, []);
 
   return(

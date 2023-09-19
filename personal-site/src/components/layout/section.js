@@ -11,9 +11,8 @@ export default function Section(props) {
 
   return(
     <section className={classes.section} ref={sectionRef}>
-      <span className={classes.date}>{post.date}</span>
-      <h2 className={classes.sectionTitle}>{post.title}</h2>
-      <div className={classes.content} dangerouslySetInnerHTML={{__html: post.content}} />
+      {post.title}
+      {post.content}
     </section>
   )
 }

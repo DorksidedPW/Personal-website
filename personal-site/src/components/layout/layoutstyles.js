@@ -16,6 +16,9 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottom: '1px solid #eaeaea',
+    position: 'sticky',
+    top: 0,
+    backgroundColor: 'white',
     '@media (max-width: 1024px)': {
       padding: 16,
     }
