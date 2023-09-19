@@ -1,5 +1,7 @@
 export default function FormatDates(date) {
-  const formatteddate = 'Dit is een test'
+  const formatteddate = new Date(date);
+
+  console.log(formatteddate)
 
   return formatteddate;
 }

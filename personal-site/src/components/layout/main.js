@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./header";
 import Post from "./post";
+import GetData from "../../functions/getdata";
 import useStyles from "./layoutstyles";
 import theme from '../theme/theme';
 import {ThemeProvider} from 'react-jss';
@@ -16,6 +17,8 @@ export default function Main(props) {
 
       setPosts(posts);
     }
+
+    GetData();
 
     getPosts();
   }, []);

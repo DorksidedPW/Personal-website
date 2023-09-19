@@ -36,12 +36,14 @@ const useStyles = createUseStyles({
     fontSize: 14,
     fontWeight: 400,
     fontFamily: "'Roboto', sans-serif ",
+    '& img': {
+      border: '4px solid red'
+    },
     '@media (max-width: 1024px)': {
       padding: 16,
       fontSize: 16
     }
   },
-
   sectionTitle: {
     fontFamily: "'Montserrat', sans-serif",
     //background: ({theme}) => theme.palette.secondary

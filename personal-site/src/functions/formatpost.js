@@ -10,6 +10,6 @@ export default function FormatPost(post) {
     //Sanitize HTML
     content:  parse(post.content.rendered)
   }
-  
+
   return(formattedPost); 
 }
