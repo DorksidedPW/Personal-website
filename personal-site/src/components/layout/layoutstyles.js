@@ -12,6 +12,7 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     gap: '64px'
   },
+  
 
   //HEADER
   header: {
@@ -34,6 +35,24 @@ const useStyles = createUseStyles({
 
   //POST
   post: {},
+
+  //MENU
+  menuContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%'
+  },
+
+  menu: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '24px'
+  },
+
+  menuItem: {
+    heigth: 48,
+    maxHeight: 48
+  },
 
   //SECTION
   section: {
@@ -59,8 +78,8 @@ const useStyles = createUseStyles({
   },
 
   content: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontWeight: 500,
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 500,
     '& blockquote': {
       fontStyle: "italic",
       margin: 0,
@@ -71,7 +90,6 @@ const useStyles = createUseStyles({
       borderLeft: '2px solid white'
     }
   }
-
 });
 
 export default useStyles;

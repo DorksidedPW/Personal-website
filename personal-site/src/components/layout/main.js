@@ -25,7 +25,6 @@ export default function Main(props) {
 
   return(
     <ThemeProvider theme={theme}> 
-      <Header />
       <div
         style={{
           display: 'flex',

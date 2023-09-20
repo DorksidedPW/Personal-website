@@ -10,11 +10,10 @@ export default function MainMenu(props) {
     if(posts) {
       let menuitems = [];
       posts.map((post) => {
-        console.log(post)
-
         menuitems.push({
           id: post.id,
           label: post.title.rendered,
+          subtitle: post.excerpt.rendered
         });
         setMenu(menuitems)
       })
@@ -22,11 +21,11 @@ export default function MainMenu(props) {
   }, [posts]);
 
   return(
-    <nav>
-      <ul>
+    <nav className={classes.menuContainer}>
+      <ul className={classes.menu}>
         {menu.map((menuitem) => {
           return(
-            <li>
+            <li className={classes.menuItem}>
               <a href={`#${menuitem.id}`}>{menuitem.label}</a>
             </li>
           );
