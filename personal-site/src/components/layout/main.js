@@ -8,7 +8,7 @@ import theme from '../theme/theme';
 import {ThemeProvider} from 'react-jss';
 
 export default function Main(props) {
-  const classes = useStyles(); 
+  const classes          = useStyles(); 
   const[posts, setPosts] = useState([]); 
   
   useEffect(() => {

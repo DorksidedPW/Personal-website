@@ -4,7 +4,7 @@ import useStyles from "./layoutstyles";
 import { useRef } from "react";
 
 export default function Header(props) {
-  const classes = useStyles();
+  const classes   = useStyles();
   const headerRef = useRef(null);
 
   return(
