@@ -3,8 +3,22 @@ import {createUseStyles} from 'react-jss'
 const useStyles = createUseStyles({
   //MAIN
   main: {
-    width: '100%',
-    color: 'white'
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '32px 15% 32px 15%',
+    boxSizing: 'border-box',
+    height: '100vh',
+    maxHeight: '100vh',
+    overflowY: 'auto', 
+    scrollBehavior: 'smooth',
+  },
+
+  mainMenuContainer: {
+    width: '30%',
+    minWidth: '30%',
+    height: '100%',
+    position: 'sticky',
+    top: 0
   },
 
   postsContainer:{

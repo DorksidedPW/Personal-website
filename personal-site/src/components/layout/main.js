@@ -10,7 +10,6 @@ import {ThemeProvider} from 'react-jss';
 export default function Main(props) {
   const classes = useStyles(); 
   const[posts, setPosts] = useState([]); 
-  const[media, setMedia] = useState([]);
   
   useEffect(() => {
     async function getPosts() {
@@ -25,19 +24,8 @@ export default function Main(props) {
 
   return(
     <ThemeProvider theme={theme}> 
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          padding: '32px 15% 32px 15%',
-          boxSizing: 'border-box',
-          height: '100vh',
-          maxHeight: '100vh',
-          overflowY: 'auto', 
-          scrollBehavior: 'smooth',
-        }}
-      >
-        <div style={{width: '30%', minWidth: '30%', height: '100%', position: 'sticky', top: 0}}>
+      <div className={classes.main}>
+        <div className={classes.mainMenuContainer}>
           <MainMenu posts={posts}/>
         </div>
         <div className={classes.postsContainer}>
