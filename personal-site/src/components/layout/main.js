@@ -8,7 +8,8 @@ import {ThemeProvider} from 'react-jss';
 
 export default function Main(props) {
   const classes = useStyles(); 
-  const[posts, setPosts] = useState([]);
+  const[posts, setPosts] = useState([]); 
+  const[media, setMedia] = useState([]);
   
   useEffect(() => {
     async function getPosts() {
@@ -17,14 +18,19 @@ export default function Main(props) {
 
       setPosts(posts);
     }
+    
+    // async function getFeaturedMedia(){
+    //   const response = await fetch('https://www.paulwassen.nl/wp-json/wp/v2/posts/');
+    //   const posts = await response.json();
 
-    GetData();
+    //   setMedia  (posts);  
+    // }
 
     getPosts();
   }, []);
 
   return(
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}> 
       <Header />
       {posts.map((post) => {
         return(<Post key={post.id} post={post}/>)

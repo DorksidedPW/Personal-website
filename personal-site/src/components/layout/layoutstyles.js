@@ -4,8 +4,9 @@ const useStyles = createUseStyles({
   //MAIN
   main: {
     width: '100%',
-    backgroundColor: 'white'
+    color: 'white'
   },
+
   //HEADER
   header: {
     width: '100%',
@@ -15,10 +16,8 @@ const useStyles = createUseStyles({
     boxSizing: 'border-box',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderBottom: '1px solid #eaeaea',
     position: 'sticky',
     top: 0,
-    backgroundColor: 'white',
     '@media (max-width: 1024px)': {
       padding: 16,
     }
@@ -34,6 +33,7 @@ const useStyles = createUseStyles({
   section: {
     padding: '32px 15% 32px 15%',
     fontSize: 14,
+    color:'#eeeeee',
     fontWeight: 400,
     fontFamily: "'Roboto', sans-serif ",
     '& img': {
@@ -52,13 +52,16 @@ const useStyles = createUseStyles({
   date: {
     fontSize: 12,
     fontWeight: 'bold',
-    color: '#c6c6c6'
   },
 
   content: {
     '& blockquote': {
       fontStyle: "italic",
-      color: '#4e4e4e'
+      margin: 0,
+      fontSize: '1.5em',
+      fontWeight: 200,
+      paddingLeft: 16,
+      borderLeft: '2px solid white'
     }
   }
 
