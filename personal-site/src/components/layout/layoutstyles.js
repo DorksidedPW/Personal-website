@@ -7,6 +7,12 @@ const useStyles = createUseStyles({
     color: 'white'
   },
 
+  postsContainer:{
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '64px'
+  },
+
   //HEADER
   header: {
     width: '100%',
@@ -31,7 +37,6 @@ const useStyles = createUseStyles({
 
   //SECTION
   section: {
-    padding: '32px 15% 32px 15%',
     fontSize: 14,
     color:'#eeeeee',
     fontWeight: 400,
@@ -45,7 +50,6 @@ const useStyles = createUseStyles({
     }
   },
   sectionTitle: {
-    fontFamily: "'Montserrat', sans-serif",
     //background: ({theme}) => theme.palette.secondary
   },
 
@@ -55,10 +59,13 @@ const useStyles = createUseStyles({
   },
 
   content: {
+      fontFamily: "'Montserrat', sans-serif",
+      fontWeight: 500,
     '& blockquote': {
       fontStyle: "italic",
       margin: 0,
       fontSize: '1.5em',
+      fontFamily: 'Roboto, sans-serif',
       fontWeight: 200,
       paddingLeft: 16,
       borderLeft: '2px solid white'

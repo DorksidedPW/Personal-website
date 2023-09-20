@@ -3,13 +3,34 @@ import useStyles from "./layoutstyles";
 
 export default function MainMenu(props) {
   const classes = useStyles();
+  const[menu, setMenu] = useState([]);
+  const {posts} = props;
+
+  useEffect(() => {
+    if(posts) {
+      let menuitems = [];
+      posts.map((post) => {
+        console.log(post)
+
+        menuitems.push({
+          id: post.id,
+          label: post.title.rendered,
+        });
+        setMenu(menuitems)
+      })
+    }
+  }, [posts]);
 
   return(
     <nav>
       <ul>
-        <li><a href=''>Link A</a></li>
-        <li><a href=''>Link B</a></li>
-        <li><a href=''>Link C</a></li>
+        {menu.map((menuitem) => {
+          return(
+            <li>
+              <a href={`#${menuitem.id}`}>{menuitem.label}</a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   )
