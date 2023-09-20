@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "./header";
 import Post from "./post";
-import GetData from "../../functions/getdata";
 import useStyles from "./layoutstyles";
 import MainMenu from "./main-menu";
 import theme from '../theme/theme';
