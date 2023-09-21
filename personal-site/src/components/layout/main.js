@@ -3,7 +3,7 @@ import Post from "./post";
 import useStyles from "./layoutstyles";
 import MainMenu from "./main-menu";
 import theme from '../theme/theme';
-import Backend from '../../functions/getdata';
+import getData from '../../functions/getdata';
 import {ThemeProvider} from 'react-jss';
 
 export default function Main(props) {
@@ -11,7 +11,7 @@ export default function Main(props) {
   const[posts, setPosts] = useState([]); 
   
   useEffect(() => {
-    const posts = Backend('/posts/').then(data => {
+    const posts = getData('/posts/').then(data => {
       setPosts(data);
     }).catch((err) => {
       console.log('Fout bij laden')
