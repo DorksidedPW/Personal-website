@@ -3,6 +3,7 @@ import Post from "./post";
 import useStyles from "./layoutstyles";
 import MainMenu from "./main-menu";
 import theme from '../theme/theme';
+import Backend from '../../functions/getdata';
 import {ThemeProvider} from 'react-jss';
 
 export default function Main(props) {
@@ -10,14 +11,11 @@ export default function Main(props) {
   const[posts, setPosts] = useState([]); 
   
   useEffect(() => {
-    async function getPosts() {
-      const response = await fetch('https://www.paulwassen.nl/wp-json/wp/v2/posts/');
-      const posts = await response.json();
-
-      setPosts(posts);
-    }
-
-    getPosts();
+    const posts = Backend('/posts/').then(data => {
+      setPosts(data);
+    }).catch((err) => {
+      console.log('Fout bij laden')
+    })
   }, []);
 
   return(

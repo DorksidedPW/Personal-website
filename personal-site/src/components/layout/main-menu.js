@@ -25,7 +25,7 @@ export default function MainMenu(props) {
       <ul className={classes.menu}>
         {menu.map((menuitem) => {
           return(
-            <li className={classes.menuItem}>
+            <li key={menuitem.id} className={classes.menuItem}>
               <a href={`#${menuitem.id}`}>{menuitem.label}</a>
             </li>
           );
