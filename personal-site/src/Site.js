@@ -22,8 +22,6 @@ const Site = (props) => {
 
   }, [])
 
-  console.log(theme)
-
   return (
     <ThemeProvider theme={theme}> 
       <Main globalData={globalData} theme={theme}/>

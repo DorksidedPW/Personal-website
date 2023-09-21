@@ -3,9 +3,6 @@ import {createUseStyles} from 'react-jss'
 const layoutStyles = createUseStyles((theme) => ({
   //MAIN
   main: {
-    display: 'flex',
-    flexDirection: 'row',
-    padding: '32px 15% 32px 15%',
     boxSizing: 'border-box',
     height: '100vh',
     maxHeight: '100vh',
@@ -38,7 +35,7 @@ const layoutStyles = createUseStyles((theme) => ({
   //HEADER
   header: {
     width: '100%',
-    height: 148,
+    height: 360,
     display: 'flex',
     padding: '32px 15% 32px 15%',
     boxSizing: 'border-box',
@@ -79,27 +76,29 @@ const layoutStyles = createUseStyles((theme) => ({
   sectionGrid: {
     display: 'grid',
     gridTemplateColumns: '220px 1fr 1fr',
+    color: theme.palette.primaryTextColor,
+    backgroundColor: theme.palette.darkBG,
+    padding: '32px 15% 32px 15%',
     gridTemplateRows: '48px 1fr 0',
     gridTemplateAreas: `
       "image top top"
       "image content content"
       "image bottom bottom"
-    `,
+    `
   },
 
   section: {
     fontSize: 14,
     gridArea: 'content',
-    color: theme.palette.primaryTextColor,
     fontWeight: 400,
     position: 'relative',
     zIndex: 10,
-    padding: 64,  
+    padding: '8px 32px 8px 32px',
     fontFamily: "'Roboto', sans-serif ",
     '@media (max-width: 1024px)': {
       padding: 16,
       fontSize: 16
-    }
+    },
   },
 
   sectionImage: {
@@ -112,6 +111,8 @@ const layoutStyles = createUseStyles((theme) => ({
   },
 
   sectionTitle: {
+    fontSize:  48,
+    margin: 0,
     //background: ({theme}) => theme.palette.secondary
   },
 
@@ -126,7 +127,7 @@ const layoutStyles = createUseStyles((theme) => ({
     '& blockquote': {
       fontStyle: "italic",
       margin: 0,
-      fontSize: '1.5em',
+      fontSize: '1.2em',
       fontFamily: 'Roboto, sans-serif',
       fontWeight: 200,
       paddingLeft: 16,

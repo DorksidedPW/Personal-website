@@ -5,7 +5,7 @@ const theme = {
     darkBG: '#0D0D0D',
     
     //TEXTCOLORS
-    primaryTextColor: 'white',
+    primaryTextColor: '#D9D8D7',
     darkTextColor: 'white',
 
     //PRIMARYCOLORS
