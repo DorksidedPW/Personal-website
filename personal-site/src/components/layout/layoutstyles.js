@@ -14,6 +14,9 @@ const layoutStyles = createUseStyles((theme) => ({
     backgroundColor: theme.palette.primaryBG,
     '@media (prefers-color-scheme: dark)': {
       backgroundColor: theme.palette.darkBG,
+    },
+    '@media (max-width: 1024px)': {
+      padding: 16,
     }
   },
 
@@ -75,7 +78,7 @@ const layoutStyles = createUseStyles((theme) => ({
   //SECTION
   section: {
     fontSize: 14,
-    color:'#eeeeee',
+    color: theme.palette.primaryTextColor,
     fontWeight: 400,
     fontFamily: "'Roboto', sans-serif ",
     '& img': {

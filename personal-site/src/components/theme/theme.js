@@ -1,11 +1,11 @@
 const theme = {
   palette: {
     //LAYOUT COLORS
-    primaryBG: 'white',
-    darkBG: '#151515',
+    primaryBG: '#A3B4BF',
+    darkBG: '#0D0D0D',
     
     //TEXTCOLORS
-    primaryTextColor: '#151515',
+    primaryTextColor: '#313740',
     darkTextColor: 'white',
 
     //PRIMARYCOLORS
