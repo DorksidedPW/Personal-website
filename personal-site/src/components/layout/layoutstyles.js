@@ -76,19 +76,41 @@ const layoutStyles = createUseStyles((theme) => ({
   },
 
   //SECTION
+  sectionGrid: {
+    display: 'grid',
+    gridTemplateColumns: '220px 1fr 1fr',
+    gridTemplateRows: '48px 1fr 0',
+    gridTemplateAreas: `
+      "image top top"
+      "image content content"
+      "image bottom bottom"
+    `,
+  },
+
   section: {
     fontSize: 14,
+    gridArea: 'content',
     color: theme.palette.primaryTextColor,
     fontWeight: 400,
+    position: 'relative',
+    zIndex: 10,
+    padding: 64,  
     fontFamily: "'Roboto', sans-serif ",
-    '& img': {
-      border: '4px solid red'
-    },
     '@media (max-width: 1024px)': {
       padding: 16,
       fontSize: 16
     }
   },
+
+  sectionImage: {
+    gridArea: 'image',
+    position: 'relative',
+    zIndex: 100,
+    width: '100%',
+    boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+    maxWidth: '100%'
+  },
+
   sectionTitle: {
     //background: ({theme}) => theme.palette.secondary
   },

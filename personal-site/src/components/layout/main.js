@@ -9,8 +9,6 @@ export default function Main(...props) {
   const theme = useTheme();
   const classes = layoutStyles({theme});
   const[posts, setPosts] = useState([]); 
-  
-  console.log(theme)
 
   useEffect(() => {
     const posts = getData('/posts/').then(data => {
@@ -22,9 +20,6 @@ export default function Main(...props) {
 
   return(
     <div className={classes.main}>
-      <div className={classes.mainMenuContainer}>
-        <MainMenu posts={posts}/>
-      </div>
       <div className={classes.postsContainer}>
         {posts.map((post) => {
           return(<Post key={post.id} post={post}/>)
