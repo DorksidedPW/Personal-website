@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import Post from "./post";
-import useStyles from "./layoutstyles";
+import { useTheme } from "react-jss";
 import MainMenu from "./main-menu";
-import theme from '../theme/theme';
 import getData from '../../functions/getdata';
-import {ThemeProvider} from 'react-jss';
+import layoutStyles from "./layoutstyles";
 
-export default function Main(props) {
-  const classes          = useStyles(); 
+export default function Main(...props) {
+  const theme = useTheme();
+  const classes = layoutStyles({theme});
   const[posts, setPosts] = useState([]); 
   
+  console.log(theme)
+
   useEffect(() => {
     const posts = getData('/posts/').then(data => {
       setPosts(data);
@@ -19,17 +21,15 @@ export default function Main(props) {
   }, []);
 
   return(
-    <ThemeProvider theme={theme}> 
-      <div className={classes.main}>
-        <div className={classes.mainMenuContainer}>
-          <MainMenu posts={posts}/>
-        </div>
-        <div className={classes.postsContainer}>
-          {posts.map((post) => {
-            return(<Post key={post.id} post={post}/>)
-          })}
-        </div>
+    <div className={classes.main}>
+      <div className={classes.mainMenuContainer}>
+        <MainMenu posts={posts}/>
       </div>
-    </ThemeProvider>
+      <div className={classes.postsContainer}>
+        {posts.map((post) => {
+          return(<Post key={post.id} post={post}/>)
+        })}
+      </div>
+    </div>
   )
 }

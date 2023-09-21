@@ -1,6 +1,6 @@
 import {createUseStyles} from 'react-jss'
 
-const useStyles = createUseStyles({
+const layoutStyles = createUseStyles((theme) => ({
   //MAIN
   main: {
     display: 'flex',
@@ -9,8 +9,12 @@ const useStyles = createUseStyles({
     boxSizing: 'border-box',
     height: '100vh',
     maxHeight: '100vh',
-    overflowY: 'auto', 
+    overflowY: 'auto',
     scrollBehavior: 'smooth',
+    backgroundColor: theme.palette.primaryBG,
+    '@media (prefers-color-scheme: dark)': {
+      backgroundColor: theme.palette.darkBG,
+    }
   },
 
   mainMenuContainer: {
@@ -21,7 +25,7 @@ const useStyles = createUseStyles({
     top: 0
   },
 
-  postsContainer:{
+  postsContainer:{  
     display: 'flex',
     flexDirection: 'column',
     gap: '64px'
@@ -104,6 +108,6 @@ const useStyles = createUseStyles({
       borderLeft: '2px solid white'
     }
   }
-});
+}));
 
-export default useStyles;
+export default layoutStyles;

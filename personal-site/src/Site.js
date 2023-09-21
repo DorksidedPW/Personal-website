@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Main from './components/layout/main';
+import {ThemeProvider} from 'react-jss';
+import theme from './components/theme/theme'
 
 const Site = (props) => {
   const[globalData, setGlobalData] = useState({
@@ -20,8 +22,12 @@ const Site = (props) => {
 
   }, [])
 
+  console.log(theme)
+
   return (
-    <Main globalData={globalData}/>
+    <ThemeProvider theme={theme}> 
+      <Main globalData={globalData} theme={theme}/>
+    </ThemeProvider>
   );
 }
 
