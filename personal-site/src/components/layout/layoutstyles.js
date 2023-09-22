@@ -30,21 +30,20 @@ const layoutStyles = createUseStyles((theme) => ({
     flexDirection: 'column',
     gap: '64px'
   },
-  
 
   //HEADER
   header: {
     width: '100%',
     height: 360,
     display: 'flex',
-    padding: '32px 15% 32px 15%',
+    padding: theme.paddings.layout.fullScreenPadding,
     boxSizing: 'border-box',
     alignItems: 'center',
     justifyContent: 'space-between',
     position: 'sticky',
     top: 0,
     '@media (max-width: 1024px)': {
-      padding: 16,
+      padding: theme.paddings.layout.fullScreenPadding,
     }
   },
 

@@ -17,6 +17,13 @@ const theme = {
     secondaryAccentColor: '',
   },
 
+  paddings: {
+    layout: {
+      fullScreenPadding: '32px 15% 32px 15%',
+      mobilePadding: '16px'  
+    }
+  },
+  
   buttonStyles: {
     borderColor: '#F2DFEB',
     backgroundColor: '#D91E0D',

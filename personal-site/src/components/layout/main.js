@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Post from "./post";
 import { useTheme } from "react-jss";
 import MainMenu from "./main-menu";
-import Header from './header'
+import Header from './header';
+import Footer from './footer';
 import getData from '../../functions/getdata';
 import layoutStyles from "./layoutstyles";
 
@@ -15,12 +16,12 @@ export default function Main(...props) {
     const posts = getData('/posts/').then(data => {
       setPosts(data);
     }).catch((err) => {
-      console.log(err)
+      console.log('TODO Return error message')
+      setPosts([])
     })
   }, []);
 
-
-  return
+  return(
     <main className={classes.main}>
       <Header />
       <div className={classes.postsContainer}>
@@ -28,6 +29,7 @@ export default function Main(...props) {
           return(<Post key={post.id} post={post}/>)
         })}
       </div>
+      <Footer />
     </main>
   )
 }
