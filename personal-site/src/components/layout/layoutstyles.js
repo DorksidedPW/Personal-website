@@ -8,7 +8,7 @@ const layoutStyles = createUseStyles((theme) => ({
     maxHeight: '100vh',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
-    backgroundColor: theme.palette.primaryBG,
+    backgroundColor: theme.palette.dark,
     '@media (prefers-color-scheme: dark)': {
       backgroundColor: theme.palette.darkBG,
     },
@@ -76,7 +76,7 @@ const layoutStyles = createUseStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns: '220px 1fr 1fr',
     color: theme.palette.primaryTextColor,
-    backgroundColor: theme.palette.darkBG,
+    backgroundColor: theme.palette.dark,
     padding: '32px 15% 32px 15%',
     gridTemplateRows: '48px 1fr 0',
     gridTemplateAreas: `

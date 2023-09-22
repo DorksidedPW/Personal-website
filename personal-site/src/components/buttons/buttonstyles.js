@@ -1,6 +1,6 @@
 import {createUseStyles} from 'react-jss'
 
-const buttonStyles = createUseStyles({
+const buttonStyles = createUseStyles((theme) => ({
 
   button: {
     width: 100,
@@ -9,12 +9,21 @@ const buttonStyles = createUseStyles({
     borderRadius: '50px',
     fontSize: 14,
     textAlign: 'center',
+    boxShadow: `1px 2px 1px ${theme.palette.dOrange}`,
     textDecoration: 'none',
-    fontWeight: 800,
-    color: ({theme}) => theme.buttonStyles.labelColor,
-    borderColor: ({theme}) => theme.buttonStyles.borderColor,
-    background: ({theme}) => theme.buttonStyles.backgroundColor
+    fontFamily: 'Roboto, sans-serif',
+    fontWeight: 600,
+    color: theme.buttonStyles.labelColor,
+    borderColor: theme.palette.dOrange,
+    background: theme.palette.red,
+    '&:hover': {
+      color: theme.buttonStyles.labelColor,
+      borderColor: theme.palette.red,
+      boxShadow: `1px 2px 1px ${theme.palette.red}`,
+      background: theme.palette.dOrange,
+      transition: '0.1s ease-in',
+    }
   }
-});
+}));
 
 export default buttonStyles;
