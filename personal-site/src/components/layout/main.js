@@ -19,9 +19,8 @@ export default function Main(...props) {
     })
   }, []);
 
-  console.log(props)
 
-  return(
+  return
     <main className={classes.main}>
       <Header />
       <div className={classes.postsContainer}>
