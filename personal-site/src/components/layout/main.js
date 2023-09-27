@@ -19,15 +19,18 @@ export default function Main(...props) {
     })
   }, []);
 
-  console.log(props)
-
   return(
     <main className={classes.main}>
-      <Header />
-      <div className={classes.postsContainer}>
-        {posts.map((post) => {
-          return(<Post key={post.id} post={post}/>)
-        })}
+      <div className={classes.mainMenuContainer}>
+        <MainMenu posts={posts}/>
+      </div>
+      <div className={classes.contentContainer}>
+        <Header posts={posts} globalData={props.globalData}/>
+        <div className={classes.postsContainer}>
+          {posts.map((post) => {
+            return(<Post key={post.id} post={post}/>)
+          })}
+        </div>
       </div>
     </main>
   )

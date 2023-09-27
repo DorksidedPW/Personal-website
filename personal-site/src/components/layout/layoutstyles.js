@@ -5,10 +5,11 @@ const layoutStyles = createUseStyles((theme) => ({
   main: {
     boxSizing: 'border-box',
     height: '100vh',
+    display: 'flex',
     maxHeight: '100vh',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
-    backgroundColor: theme.palette.primaryBG,
+    backgroundColor: theme.palette.darkBG,
     '@media (prefers-color-scheme: dark)': {
       backgroundColor: theme.palette.darkBG,
     },
@@ -25,6 +26,12 @@ const layoutStyles = createUseStyles((theme) => ({
     top: 0
   },
 
+  contentContainer: {
+    boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+    height: '100%',
+    overflowY: 'auto'
+  },
+
   postsContainer:{  
     display: 'flex',
     flexDirection: 'column',
@@ -35,17 +42,36 @@ const layoutStyles = createUseStyles((theme) => ({
   //HEADER
   header: {
     width: '100%',
-    height: 360,
-    display: 'flex',
+    height: '60vh',
     padding: '32px 15% 32px 15%',
     boxSizing: 'border-box',
-    alignItems: 'center',
-    justifyContent: 'space-between',
     position: 'sticky',
     top: 0,
     '@media (max-width: 1024px)': {
       padding: 16,
-    }
+    },
+  },
+
+  siteTitle: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
+    flexDirection: 'column',
+  },
+
+  siteName: {
+    fontSize:  72,
+    fontWeight: 800,
+    fontFamily: "'Roboto', sans-serif ",
+    textTransform: "uppercase",
+    color: '#D9D8D7',
+    margin: 0
+  },
+
+  siteDescription: {
+    fontFamily: "'Montserrat', sans-serif",
+    fontSize: 24
   },
 
   //PAGE
@@ -69,7 +95,18 @@ const layoutStyles = createUseStyles((theme) => ({
 
   menuItem: {
     heigth: 48,
-    maxHeight: 48
+    listStyle: "none",
+    '& a': {
+      display: 'flex',
+      flexDirection: 'column',
+      color: 'white',
+      textDecoration: 'none'
+    },
+  },
+
+  itemLabel: {
+    fontFamily: "'Roboto', sans-serif ",
+    textTransform: 'uppercase'
   },
 
   //SECTION
@@ -77,7 +114,7 @@ const layoutStyles = createUseStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns: '220px 1fr 1fr',
     color: theme.palette.primaryTextColor,
-    backgroundColor: theme.palette.darkBG,
+    //backgroundColor: theme.palette.darkBG,
     padding: '32px 15% 32px 15%',
     gridTemplateRows: '48px 1fr 0',
     gridTemplateAreas: `
@@ -111,7 +148,8 @@ const layoutStyles = createUseStyles((theme) => ({
   },
 
   sectionTitle: {
-    fontSize:  48,
+    fontSize:  32,
+    textTransform: 'uppercase',
     margin: 0,
     //background: ({theme}) => theme.palette.secondary
   },

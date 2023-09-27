@@ -5,7 +5,9 @@ export default function MainMenu(props) {
   const {posts}        = props;
   const classes        = useStyles();
   const[menu, setMenu] = useState([]);
-  
+
+  console.log(posts)
+
   useEffect(() => {
     if(posts) {
       let menuitems = [];
@@ -26,7 +28,12 @@ export default function MainMenu(props) {
         {menu.map((menuitem) => {
           return(
             <li key={menuitem.id} className={classes.menuItem}>
-              <a href={`#${menuitem.id}`}>{menuitem.label}</a>
+              <a href={`#${menuitem.id}`}>
+                <span className={classes.itemLabel}>
+                  {menuitem.label}
+                </span>
+                <span className={classes.itemSubLabel}>{menuitem.subtitle}</span>
+              </a>
             </li>
           );
         })}
