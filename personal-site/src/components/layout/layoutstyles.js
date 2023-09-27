@@ -9,7 +9,7 @@ const layoutStyles = createUseStyles((theme) => ({
     maxHeight: '100vh',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
-    backgroundColor: theme.palette.darkBG,
+    backgroundColor: theme.palette.dark,
     '@media (prefers-color-scheme: dark)': {
       backgroundColor: theme.palette.darkBG,
     },
@@ -37,41 +37,19 @@ const layoutStyles = createUseStyles((theme) => ({
     flexDirection: 'column',
     gap: '64px'
   },
-  
 
   //HEADER
   header: {
     width: '100%',
-    height: '60vh',
-    padding: '32px 15% 32px 15%',
+    height: 360,
+    display: 'flex',
+    padding: theme.paddings.layout.fullScreenPadding,
     boxSizing: 'border-box',
     position: 'sticky',
     top: 0,
     '@media (max-width: 1024px)': {
-      padding: 16,
-    },
-  },
-
-  siteTitle: {
-    display: 'flex',
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%',
-    flexDirection: 'column',
-  },
-
-  siteName: {
-    fontSize:  72,
-    fontWeight: 800,
-    fontFamily: "'Roboto', sans-serif ",
-    textTransform: "uppercase",
-    color: '#D9D8D7',
-    margin: 0
-  },
-
-  siteDescription: {
-    fontFamily: "'Montserrat', sans-serif",
-    fontSize: 24
+      padding: theme.paddings.layout.fullScreenPadding,
+    }
   },
 
   //PAGE
@@ -114,7 +92,7 @@ const layoutStyles = createUseStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns: '220px 1fr 1fr',
     color: theme.palette.primaryTextColor,
-    //backgroundColor: theme.palette.darkBG,
+    backgroundColor: theme.palette.dark,
     padding: '32px 15% 32px 15%',
     gridTemplateRows: '48px 1fr 0',
     gridTemplateAreas: `
