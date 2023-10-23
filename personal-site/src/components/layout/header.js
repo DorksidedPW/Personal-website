@@ -28,10 +28,7 @@ export default function Header(props) {
 
   return(
     <header className={classes.header}>
-      <div className={classes.siteTitle}>
-        <h1 className={classes.siteName}>{globalData.siteName}</h1>
-        <span className={classes.siteDescription}>{globalData.siteDescription}</span>
-      </div>
+      HEADER
     </header>
   )
 }

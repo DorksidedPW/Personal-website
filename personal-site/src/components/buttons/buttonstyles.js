@@ -23,7 +23,19 @@ const buttonStyles = createUseStyles((theme) => ({
       background: theme.palette.dOrange,
       transition: '0.1s ease-in',
     }
+  },
+
+  iconButton: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 48,
+    height: 48,
+    background: 'none',
+    border: 'none',
+    color: 'white'
   }
+
 }));
 
 export default buttonStyles;

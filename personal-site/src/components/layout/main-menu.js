@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react"
 import useStyles from "./layoutstyles";
+import Iconbutton from "../buttons/iconbutton";
 
 export default function MainMenu(props) {
   const {posts}        = props;
   const classes        = useStyles();
   const[menu, setMenu] = useState([]);
-
-  console.log(posts)
-
+  
   useEffect(() => {
     if(posts) {
       let menuitems = [];
@@ -23,21 +22,22 @@ export default function MainMenu(props) {
   }, [posts]);
 
   return(
-    <nav className={classes.menuContainer}>
-      <ul className={classes.menu}>
-        {menu.map((menuitem) => {
-          return(
-            <li key={menuitem.id} className={classes.menuItem}>
-              <a href={`#${menuitem.id}`}>
-                <span className={classes.itemLabel}>
-                  {menuitem.label}
-                </span>
-                <span className={classes.itemSubLabel}>{menuitem.subtitle}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+    <div className={classes.menuContainer}>
+       <nav>
+          <ul style={{padding: 16, boxSizing: 'border-box'}}>
+            {menu.map((item) => <li className={classes.menuItem}>
+              <a href={`#${item.id}`}>
+                <h4>{item.label}</h4>
+                <span style={{fontSize: 12}}>{item.subtitle}</span>
+              </a>  
+            </li>)}
+          </ul>
+        </nav>
+        <div>
+          <Iconbutton />
+          <Iconbutton />
+          <Iconbutton />
+        </div>
+    </div>
   )
 }

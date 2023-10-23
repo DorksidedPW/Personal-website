@@ -2,7 +2,7 @@ const theme = {
   palette: {
     //LAYOUT COLORS
     primaryBG: '#A3B4BF',
-    darkBG: '#0D0D0D',
+    darkBG: '#151515',
     
     //TEXTCOLORS
     primaryTextColor: '#D9D8D7',

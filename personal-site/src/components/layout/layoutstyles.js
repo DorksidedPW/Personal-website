@@ -5,10 +5,11 @@ const layoutStyles = createUseStyles((theme) => ({
   main: {
     boxSizing: 'border-box',
     height: '100vh',
-    display: 'flex',
     maxHeight: '100vh',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
+    paddingLeft: '15%',
+    paddingRight: '15%',
     backgroundColor: theme.palette.dark,
     '@media (prefers-color-scheme: dark)': {
       backgroundColor: theme.palette.darkBG,
@@ -17,20 +18,7 @@ const layoutStyles = createUseStyles((theme) => ({
       padding: 16,
     }
   },
-
-  mainMenuContainer: {
-    width: '30%',
-    minWidth: '30%',
-    height: '100%',
-    position: 'sticky',
-    top: 0
-  },
-
-  contentContainer: {
-    boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
-    height: '100%',
-    overflowY: 'auto'
-  },
+  contentContainer: {},
 
   postsContainer:{  
     display: 'flex',
@@ -41,12 +29,10 @@ const layoutStyles = createUseStyles((theme) => ({
   //HEADER
   header: {
     width: '100%',
-    height: 360,
+    height: 40,
     display: 'flex',
-    padding: theme.paddings.layout.fullScreenPadding,
     boxSizing: 'border-box',
-    position: 'sticky',
-    top: 0,
+    backgroundColor: theme.palette.dark,
     '@media (max-width: 1024px)': {
       padding: theme.paddings.layout.fullScreenPadding,
     }
@@ -59,10 +45,19 @@ const layoutStyles = createUseStyles((theme) => ({
   post: {},
 
   //MENU
+  mainMenuContainer: {
+    height: '100%',
+    position: 'sticky',
+    width:'25%',
+    top: 0
+  },
+
   menuContainer: {
     display: 'flex',
-    alignItems: 'center',
-    height: '100%'
+    flexDirection: 'column',
+    height: '100vh',
+    position: 'sticky',
+    top: 0,
   },
 
   menu: {
@@ -72,14 +67,33 @@ const layoutStyles = createUseStyles((theme) => ({
   },
 
   menuItem: {
-    heigth: 48,
-    listStyle: "none",
+    listStyle:'none',
+    color: 'white',
+    fontFamily: "'Roboto', sans-serif ",
+    marginBottom: 32,
+    display: 'flex',
+    flexDirection:'column',
     '& a': {
-      display: 'flex',
-      flexDirection: 'column',
-      color: 'white',
-      textDecoration: 'none'
-    },
+      color:'white',
+      textDecoration: 'none',
+      '& h4': {
+        margin: 0,
+        fontSize: 14,
+        textTransform: 'uppercase',
+      },
+      '& span': {
+        width: 200,
+        height: 48,
+        overflow: 'hidden',
+        display:'block',
+        whiteSpace:'nowrap',
+        textOverflow: 'ellipsis'
+      },
+      '&:hover': {
+        color: '#ff7c07',
+        transition:'0.1s ease-in'
+      }
+    }
   },
 
   itemLabel: {
@@ -89,26 +103,17 @@ const layoutStyles = createUseStyles((theme) => ({
 
   //SECTION
   sectionGrid: {
-    display: 'grid',
-    gridTemplateColumns: '220px 1fr 1fr',
-    color: theme.palette.primaryTextColor,
-    backgroundColor: theme.palette.dark,
-    padding: '32px 15% 32px 15%',
-    gridTemplateRows: '48px 1fr 0',
-    gridTemplateAreas: `
-      "image top top"
-      "image content content"
-      "image bottom bottom"
-    `
+
   },
 
   section: {
-    fontSize: 14,
+    fontSize: 12,
     gridArea: 'content',
     fontWeight: 400,
     position: 'relative',
+    color: 'white',
     zIndex: 10,
-    padding: '8px 32px 8px 32px',
+    padding: '8px 64px 8px 64px',
     fontFamily: "'Roboto', sans-serif ",
     '@media (max-width: 1024px)': {
       padding: 16,
@@ -118,6 +123,7 @@ const layoutStyles = createUseStyles((theme) => ({
 
   sectionImage: {
     gridArea: 'image',
+    display: 'none',
     position: 'relative',
     zIndex: 100,
     width: '100%',
